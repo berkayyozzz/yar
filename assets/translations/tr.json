@@ -1,0 +1,19 @@
+{
+  "app_name": "Smart Budget Roast",
+  "dashboard_title": "Cüzdanın",
+  "income": "Gelir",
+  "expenses": "Gider",
+  "debt": "Borç",
+  "left": "Kalan",
+  "spent": "Harcanan %",
+  "add_transaction": "İşlem Ekle",
+  "amount": "Tutar",
+  "category": "Kategori",
+  "save": "Kaydet",
+  "cancel": "İptal",
+  "ai_roast": "AI Yargısı",
+  "financial_score": "Finansal Skor",
+  "settings": "Ayarlar",
+  "language": "Dil",
+  "theme": "Tema"
+}

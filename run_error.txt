@@ -1,0 +1,324 @@
+﻿
+[   +2 ms] C:\Users\berka\Deskt
+op\flutter\bin\cache\dart-sdk\b
+in\dartaotruntime.exe C:\Users\
+berka\Desktop\flutter\bin\cache
+\dart-sdk\bin\snapshots\fronten
+d_server_aot.dart.snapshot --sd
+k-root C:\Users\berka\Desktop\f
+lutter\bin\cache\artifacts\engi
+ne\common\flutter_patched_sdk/ 
+--incremental --target=flutter 
+--experimental-emit-debug-metad
+ata -DFLUTTER_VERSION=3.41.4 -D
+FLUTTER_CHANNEL=stable -DFLUTTE
+R_GIT_URL=https://github.com/fl
+utter/flutter.git -DFLUTTER_FRA
+MEWORK_REVISION=ff37bef603 -DFL
+UTTER_ENGINE_REVISION=e4b8dca3f
+1 -DFLUTTER_DART_VERSION=3.11.1
+ --output-dill C:\Users\berka\A
+ppData\Local\Temp\flutter_tools
+.90a2b3d0\flutter_tool.805c4d86
+\app.dill --packages C:\Users\b
+erka\.gemini\antigravity\scratc
+h\smart_budget_roast\.dart_tool
+\package_config.json -Ddart.vm.
+profile=false -Ddart.vm.product
+=false --enable-asserts --track
+-widget-creation --filesystem-s
+cheme org-dartlang-root --initi
+alize-from-dill build\8730b13ca
+0249799964d0a71255a8f3b.cache.d
+ill.track.dill --source file://
+/C:/Users/berka/.gemini/antigra
+vity/scratch/smart_budget_roast
+/.dart_tool/flutter_build/dart_
+plugin_registrant.dart --source
+ package:flutter/src/dart_plugi
+n_registrant.dart -Dflutter.dar
+t_plugin_registrant=file:///C:/
+Users/berka/.gemini/antigravity
+/scratch/smart_budget_roast/.da
+rt_tool/flutter_build/dart_plug
+in_registrant.dart --verbosity=
+error --enable-experiment=alter
+native-invalidation-strategy
+[        ] Resolve mutations fo
+r :gradle:checkKotlinGradlePlug
+inConfigurationErrors (Thread[#
+1450,Execution worker,5,main]) 
+started.
+[        ] :gradle:checkKotlinG
+radlePluginConfigurationErrors 
+(Thread[#1450,Execution worker,
+5,main]) started.
+[        ] > Task :gradle:check
+KotlinGradlePluginConfiguration
+Errors SKIPPED
+[        ] Skipping task ':grad
+le:checkKotlinGradlePluginConfi
+gurationErrors' as task onlyIf 
+'errorDiagnostics are present' 
+is false.
+[ +199 ms] Tasks to be executed
+: [task ':app:DebugMinSdkCheck'
+, task ':app:preBuild', task ':
+app:preDebugBuild', task ':app:
+mergeDebugNativeDebugMetadata',
+ task ':app:checkKotlinGradlePl
+uginConfigurationErrors', task 
+':app:compileFlutterBuildDebug'
+, task ':app:packJniLibsflutter
+BuildDebug', task ':path_provid
+er_android:preBuild', task ':pa
+th_provider_android:preDebugBui
+ld', task ':path_provider_andro
+id:writeDebugAarMetadata', task
+ ':shared_preferences_android:p
+reBuild', task ':shared_prefere
+nces_android:preDebugBuild', ta
+sk ':shared_preferences_android
+:writeDebugAarMetadata', task '
+:app:checkDebugAarMetadata', ta
+sk ':app:cleanMergeDebugAssets'
+, task ':app:mergeDebugShaders'
+, task ':app:compileDebugShader
+s', task ':app:generateDebugAss
+ets', task ':path_provider_andr
+oid:mergeDebugShaders', task ':
+path_provider_android:compileDe
+bugShaders', task ':path_provid
+er_android:generateDebugAssets'
+, task ':path_provider_android:
+mergeDebugAssets', task ':share
+d_preferences_android:mergeDebu
+gShaders', task ':shared_prefer
+ences_android:compileDebugShade
+rs', task ':shared_preferences_
+android:generateDebugAssets', t
+ask ':shared_preferences_androi
+d:mergeDebugAssets', task ':app
+:mergeDebugAssets', task ':app:
+copyFlutterAssetsDebug', task '
+:app:generateDebugResValues', t
+ask ':path_provider_android:gen
+erateDebugResValues', task ':pa
+th_provider_android:generateDeb
+ugResources', task ':path_provi
+der_android:packageDebugResourc
+es', task ':shared_preferences_
+android:generateDebugResValues'
+, task ':shared_preferences_and
+roid:generateDebugResources', t
+ask ':shared_preferences_androi
+d:packageDebugResources', task 
+':app:mapDebugSourceSetPaths', 
+task ':app:generateDebugResourc
+es', task ':app:mergeDebugResou
+rces', task ':app:packageDebugR
+esources', task ':app:parseDebu
+gLocalResources', task ':app:cr
+eateDebugCompatibleScreenManife
+sts', task ':app:extractDeepLin
+ksDebug', task ':path_provider_
+android:extractDeepLinksDebug',
+ task ':path_provider_android:p
+rocessDebugManifest', task ':sh
+ared_preferences_android:extrac
+tDeepLinksDebug', task ':shared
+_preferences_android:processDeb
+ugManifest', task ':app:process
+DebugMainManifest', task ':app:
+outputDebugAppLinkSettings', ta
+sk ':app:processDebugManifest',
+ task ':app:processDebugManifes
+tForPackage', task ':path_provi
+der_android:compileDebugLibrary
+Resources', task ':path_provide
+r_android:parseDebugLocalResour
+ces', task ':path_provider_andr
+oid:generateDebugRFile', task '
+:shared_preferences_android:com
+pileDebugLibraryResources', tas
+k ':shared_preferences_android:
+parseDebugLocalResources', task
+ ':shared_preferences_android:g
+enerateDebugRFile', task ':app:
+processDebugResources', task ':
+path_provider_android:javaPreCo
+mpileDebug', task ':path_provid
+er_android:compileDebugJavaWith
+Javac', task ':path_provider_an
+droid:bundleLibCompileToJarDebu
+g', task ':shared_preferences_a
+ndroid:checkKotlinGradlePluginC
+onfigurationErrors', task ':sha
+red_preferences_android:compile
+DebugKotlin', task ':shared_pre
+ferences_android:javaPreCompile
+Debug', task ':shared_preferenc
+es_android:compileDebugJavaWith
+Javac', task ':shared_preferenc
+es_android:bundleLibCompileToJa
+rDebug', task ':app:compileDebu
+gKotlin', task ':app:javaPreCom
+pileDebug', task ':app:compileD
+ebugJavaWithJavac', task ':app:
+compressDebugAssets', task ':pa
+th_provider_android:bundleLibRu
+ntimeToJarDebug', task ':shared
+_preferences_android:bundleLibR
+untimeToJarDebug', task ':app:d
+esugarDebugFileDependencies', t
+ask ':app:dexBuilderDebug', tas
+k ':app:mergeDebugGlobalSynthet
+ics', task ':app:processDebugJa
+vaRes', task ':path_provider_an
+droid:processDebugJavaRes', tas
+k ':shared_preferences_android:
+processDebugJavaRes', task ':ap
+p:mergeDebugJavaResource', task
+ ':app:checkDebugDuplicateClass
+es', task ':app:mergeExtDexDebu
+g', task ':path_provider_androi
+d:bundleLibRuntimeToDirDebug', 
+task ':shared_preferences_andro
+id:bundleLibRuntimeToDirDebug',
+ task ':app:mergeLibDexDebug', 
+task ':app:mergeProjectDexDebug
+', task ':app:configureCMakeDeb
+ug[arm64-v8a]', task ':app:buil
+dCMakeDebug[arm64-v8a]', task '
+:app:configureCMakeDebug[armeab
+i-v7a]', task ':app:buildCMakeD
+ebug[armeabi-v7a]', task ':app:
+configureCMakeDebug[x86_64]', t
+ask ':app:buildCMakeDebug[x86_6
+4]', task ':app:mergeDebugJniLi
+bFolders', task ':path_provider
+_android:mergeDebugJniLibFolder
+s', task ':path_provider_androi
+d:mergeDebugNativeLibs', task '
+:path_provider_android:copyDebu
+gJniLibsProjectOnly', task ':sh
+ared_preferences_android:mergeD
+ebugJniLibFolders', task ':shar
+ed_preferences_android:mergeDeb
+ugNativeLibs', task ':shared_pr
+eferences_android:copyDebugJniL
+ibsProjectOnly', task ':app:mer
+geDebugNativeLibs', task ':app:
+stripDebugDebugSymbols', task '
+:app:validateSigningDebug', tas
+k ':app:writeDebugAppMetadata',
+ task ':app:writeDebugSigningCo
+nfigVersions', task ':app:packa
+geDebug', task ':app:createDebu
+gApkListingFileRedirect', task 
+':app:assembleDebug', task ':pa
+th_provider_android:stripDebugD
+ebugSymbols', task ':path_provi
+der_android:copyDebugJniLibsPro
+jectAndLocalJars', task ':path_
+provider_android:extractDebugAn
+notations', task ':path_provide
+r_android:extractDeepLinksForAa
+rDebug', task ':path_provider_a
+ndroid:mergeDebugGeneratedProgu
+ardFiles', task ':path_provider
+_android:mergeDebugConsumerProg
+uardFiles', task ':path_provide
+r_android:prepareDebugArtProfil
+e', task ':path_provider_androi
+d:prepareLintJarForPublish', ta
+sk ':path_provider_android:merg
+eDebugJavaResource', task ':pat
+h_provider_android:syncDebugLib
+Jars', task ':path_provider_and
+roid:bundleDebugAar', task ':pa
+th_provider_android:assembleDeb
+ug', task ':shared_preferences_
+android:stripDebugDebugSymbols'
+, task ':shared_preferences_and
+roid:copyDebugJniLibsProjectAnd
+LocalJars', task ':shared_prefe
+rences_android:extractDebugAnno
+tations', task ':shared_prefere
+nces_android:extractDeepLinksFo
+rAarDebug', task ':shared_prefe
+rences_android:mergeDebugGenera
+tedProguardFiles', task ':share
+d_preferences_android:mergeDebu
+gConsumerProguardFiles', task '
+:shared_preferences_android:pre
+pareDebugArtProfile', task ':sh
+ared_preferences_android:prepar
+eLintJarForPublish', task ':sha
+red_preferences_android:mergeDe
+bugJavaResource', task ':shared
+_preferences_android:syncDebugL
+ibJars', task ':shared_preferen
+ces_android:bundleDebugAar', ta
+sk ':shared_preferences_android
+:assembleDebug']
+[        ] Resolve mutations fo
+r :app:checkKotlinGradlePluginC
+onfigurationErrors (Thread[#146
+1,Execution worker Thread 12,5,
+main]) started.
+[        ] :app:checkKotlinGrad
+lePluginConfigurationErrors (Th
+read[#1461,Execution worker Thr
+ead 12,5,main]) started.
+[        ] > Task :app:checkKot
+linGradlePluginConfigurationErr
+ors SKIPPED
+[        ] Skipping task ':app:
+checkKotlinGradlePluginConfigur
+ationErrors' as task onlyIf 'er
+rorDiagnostics are present' is 
+false.
+[        ] Resolve mutations fo
+r :shared_preferences_android:c
+heckKotlinGradlePluginConfigura
+tionErrors (Thread[#1458,Execut
+ion worker Thread 9,5,main]) st
+arted.
+[        ] :shared_preferences_
+android:checkKotlinGradlePlugin
+ConfigurationErrors (Thread[#14
+58,Execution worker Thread 9,5,
+main]) started.
+[        ] > Task :shared_prefe
+rences_android:checkKotlinGradl
+ePluginConfigurationErrors SKIP
+PED
+[        ] Skipping task ':shar
+ed_preferences_android:checkKot
+linGradlePluginConfigurationErr
+ors' as task onlyIf 'errorDiagn
+ostics are present' is false.
+           adb.exe: failed to i
+nstall C:\Users\berka\.gemini\a
+ntigravity\scratch\smart_budget
+_roast\build\app\outputs\flutte
+r-apk\app-debug.apk: Failure [I
+NSTALL_FAILED_INSUFFICIENT_STOR
+AGE: Failed to override install
+ation location]
+[        ] Error: ADB exited wi
+th exit code 1
+           adb.exe: failed to i
+nstall C:\Users\berka\.gemini\a
+ntigravity\scratch\smart_budget
+_roast\build\app\outputs\flutte
+r-apk\app-debug.apk: Failure [I
+NSTALL_FAILED_INSUFFICIENT_STOR
+AGE: Failed to override install
+ation location]
+[  +61 ms] Error launching appl
+ication on sdk gphone64 x86 64.
+
+
+

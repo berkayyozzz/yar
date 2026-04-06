@@ -1,0 +1,14 @@
+﻿3 available emulators:
+
+Id          ÔÇó Name        ÔÇó Manufacturer ÔÇó Platform
+
+Pixel_9_Pro ÔÇó Pixel 9 Pro ÔÇó Google       ÔÇó android
+bek         ÔÇó bek         ÔÇó Google       ÔÇó android
+beko        ÔÇó beko        ÔÇó Google       ÔÇó android
+
+To run an emulator, run 'flutter emulators --launch <emulator id>'.
+To create a new emulator, run 'flutter emulators --create [--name xyz]'.
+
+You can find more information on managing emulators at the links below:
+  https://developer.android.com/studio/run/managing-avds
+  https://developer.android.com/studio/command-line/avdmanager

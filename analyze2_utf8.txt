@@ -1,0 +1,9 @@
+﻿Analyzing smart_budget_roast...                                 
+
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\dashboard\dashboard_screen.dart:197:45 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\dashboard\dashboard_screen.dart:205:28 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\dashboard\dashboard_screen.dart:335:24 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\dashboard\dashboard_screen.dart:337:43 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\dashboard\dashboard_screen.dart:379:23 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\dashboard\dashboard_screen.dart:381:42 - deprecated_member_use
+

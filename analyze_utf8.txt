@@ -1,0 +1,13 @@
+﻿Analyzing smart_budget_roast...                                 
+
+  error - The argument type 'CardTheme' can't be assigned to the parameter type 'CardThemeData?'.  - lib\core\theme\app_theme.dart:31:18 - argument_type_not_assignable
+  error - The function 'StateNotifierProvider' isn't defined - lib\features\dashboard\providers\transaction_provider.dart:5:30 - undefined_function
+  error - Classes can only extend other classes - lib\features\dashboard\providers\transaction_provider.dart:10:35 - extends_non_class
+  error - Too many positional arguments: 0 expected, but 1 found - lib\features\dashboard\providers\transaction_provider.dart:13:49 - extra_positional_arguments
+  error - Undefined name 'state' - lib\features\dashboard\providers\transaction_provider.dart:18:5 - undefined_identifier
+  error - Undefined name 'state' - lib\features\dashboard\providers\transaction_provider.dart:23:5 - undefined_identifier
+  error - Undefined name 'state' - lib\features\dashboard\providers\transaction_provider.dart:23:30 - undefined_identifier
+  error - Undefined name 'state' - lib\features\dashboard\providers\transaction_provider.dart:28:5 - undefined_identifier
+  error - Undefined name 'state' - lib\features\dashboard\providers\transaction_provider.dart:28:13 - undefined_identifier
+  error - The name 'MyApp' isn't a class - test\widget_test.dart:16:35 - creation_with_non_type
+

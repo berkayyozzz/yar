@@ -1,0 +1,193 @@
+﻿Running Gradle task 'assembleRelease'...                        
+flutter : Warning: Flutte
+r support for your projec
+t's Gradle version (8.5.0
+) will soon be dropped. P
+lease upgrade your Gradle
+ version to a version of 
+at least 8.7.0 soon.
+At line:1 char:1
++ flutter build apk > bui
+ld_logs.txt 2>&1
++ ~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~
+    + CategoryInfo       
+       : NotSpecified: (W
+arni    ng: Flutte...ast 
+8.7.0     soon.:String) [
+], Remot    eException
+    + FullyQualifiedError
+Id     : NativeCommandErr
+or
+ 
+Alternatively, use the fl
+ag "--android-skip-build-
+dependency-validation" to
+ bypass this check.
+
+Potential fix: Your proje
+ct's gradle version is ty
+pically defined in the gr
+adle wrapper file. By def
+ault, this can be found a
+t C:\Users\berka\.gemini\
+antigravity\scratch\smart
+_budget_roast\android/gra
+dle/wrapper/gradle-wrappe
+r.properties. 
+For more information, see
+ https://docs.gradle.org/
+current/userguide/gradle_
+wrapper.html.
+
+Warning: Flutter support 
+for your project's Androi
+d Gradle Plugin version (
+Android Gradle Plugin ver
+sion 8.2.1) will soon be 
+dropped. Please upgrade y
+our Android Gradle Plugin
+ version to a version of 
+at least Android Gradle P
+lugin version 8.6.0 soon.
+Alternatively, use the fl
+ag "--android-skip-build-
+dependency-validation" to
+ bypass this check.
+
+Potential fix: Your proje
+ct's AGP version is typic
+ally defined in the plugi
+ns block of the `settings
+.gradle` file (C:\Users\b
+erka\.gemini\antigravity\
+scratch\smart_budget_roas
+t\android/settings.gradle
+), by a plugin with the i
+d of com.android.applicat
+ion. 
+If you don't see a plugin
+s block, your project was
+ likely created with an o
+lder template version. In
+ this case it is most lik
+ely defined in the top-le
+vel build.gradle file (C:
+\Users\berka\.gemini\anti
+gravity\scratch\smart_bud
+get_roast\android/build.g
+radle) by the following l
+ine in the dependencies b
+lock of the buildscript: 
+"classpath 'com.android.t
+ools.build:gradle:<versio
+n>'".
+
+Warning: Flutter support 
+for your project's Kotlin
+ version (1.9.10) will so
+on be dropped. Please upg
+rade your Kotlin version 
+to a version of at least 
+2.1.0 soon.
+Alternatively, use the fl
+ag "--android-skip-build-
+dependency-validation" to
+ bypass this check.
+
+Potential fix: Your proje
+ct's KGP version is typic
+ally defined in the plugi
+ns block of the `settings
+.gradle` file (C:\Users\b
+erka\.gemini\antigravity\
+scratch\smart_budget_roas
+t\android/settings.gradle
+), by a plugin with the i
+d of org.jetbrains.kotlin
+.android. 
+If you don't see a plugin
+s block, your project was
+ likely created with an o
+lder template version, in
+ which case it is most li
+kely defined in the top-l
+evel build.gradle file (C
+:\Users\berka\.gemini\ant
+igravity\scratch\smart_bu
+dget_roast\android/build.
+gradle) by the ext.kotlin
+_version property.
+
+Warning: The plugin path_provider_android requires Android SDK version 36 or higher.
+For more information about build configuration, see https://flutter.dev/to/review-gradle-config.
+Warning: The plugin shared_preferences_android requires Android SDK version 36 or higher.
+For more information about build configuration, see https://flutter.dev/to/review-gradle-config.
+Your project is configure
+d to compile against Andr
+oid SDK 34, but the follo
+wing plugin(s) require to
+ be compiled against a hi
+gher Android SDK version:
+- path_provider_android c
+ompiles against Android S
+DK 36
+- shared_preferences_andr
+oid compiles against Andr
+oid SDK 36
+Fix this issue by compili
+ng against the highest An
+droid SDK version (they a
+re backward compatible).
+Add the following to C:\U
+sers\berka\.gemini\antigr
+avity\scratch\smart_budge
+t_roast\android\app\build
+.gradle.kts:
+
+    android {
+        compileSdk = 36
+        ...
+    }
+lib/features/roast/provid
+ers/roast_provider.dart:8
+:5: Error: Method not fou
+nd: 'StateProvider'.
+    StateProvider<RoastIn
+tensity>((ref) => RoastIn
+tensity.savage);
+    ^^^^^^^^^^^^^
+Target kernel_snapshot_pr
+ogram failed: Exception
+
+
+FAILURE: Build failed wit
+h an exception.
+
+* What went wrong:
+Execution failed for task
+ ':app:compileFlutterBuil
+dRelease'.
+> Process 'command 'C:\Us
+ers\berka\Desktop\flutter
+\bin\flutter.bat'' finish
+ed with non-zero exit val
+ue 1
+
+* Try:
+> Run with --stacktrace o
+ption to get the stack tr
+ace.
+> Run with --info or --de
+bug option to get more lo
+g output.
+> Run with --scan to get 
+full insights.
+> Get more help at https:
+//help.gradle.org.
+
+BU´┐¢LD FAILED in 17s
+Running Gradle task 'assembleRelease'...                           18,5s
+Gradle task assembleRelea
+se failed with exit code 
+1

@@ -1,0 +1,19 @@
+{
+  "app_name": "Roast My Wallet",
+  "dashboard_title": "Roast My Wallet",
+  "income": "Income",
+  "expenses": "Spent",
+  "debt": "Debt",
+  "left": "Left",
+  "spent": "Spent %",
+  "add_transaction": "Add Transaction",
+  "amount": "Amount",
+  "category": "Category",
+  "save": "Save",
+  "cancel": "Cancel",
+  "ai_roast": "AI Roast",
+  "financial_score": "Financial Score",
+  "settings": "Settings",
+  "language": "Language",
+  "theme": "Theme"
+}
