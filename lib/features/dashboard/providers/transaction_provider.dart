@@ -22,6 +22,12 @@ class TransactionNotifier extends Notifier<List<Transaction>> {
     await repository.removeTransaction(id);
     state = state.where((t) => t.id != id).toList();
   }
+
+  Future<void> clearAllTransactions() async {
+    final repository = ref.read(transactionRepositoryProvider);
+    await repository.clearAll();
+    state = [];
+  }
 }
 
 // Derived providers for UI

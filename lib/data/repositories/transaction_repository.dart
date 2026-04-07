@@ -19,6 +19,10 @@ class TransactionRepository {
     await _box.delete(id);
   }
 
+  Future<void> clearAll() async {
+    await _box.clear();
+  }
+
   List<Transaction> getTransactions() {
     final transactions = <Transaction>[];
     for (var key in _box.keys) {

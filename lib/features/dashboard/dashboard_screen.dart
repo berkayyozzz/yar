@@ -149,6 +149,46 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen>
               },
               child: const Text('Clear Limit', style: TextStyle(color: Colors.redAccent)),
             ),
+            const Divider(color: Colors.white24, height: 32),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.redAccent.withValues(alpha: 0.1),
+                foregroundColor: Colors.redAccent,
+                side: const BorderSide(color: Colors.redAccent),
+              ),
+              onPressed: () {
+                Navigator.pop(ctx);
+                showDialog(
+                  context: context,
+                  builder: (confirmCtx) => AlertDialog(
+                    backgroundColor: const Color(0xFF1E1E1E),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                    title: const Text('Are you sure?', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+                    content: const Text(
+                      'Tüm harcamaları sıfırlamak (Clear All Data) istediğinize emin misiniz? Bu işlem geri alınamaz ve tüm verileriniz silinir.',
+                      style: TextStyle(color: Colors.white70),
+                    ),
+                    actions: [
+                      TextButton(
+                        onPressed: () => Navigator.pop(confirmCtx),
+                        child: const Text('İptal (Cancel)', style: TextStyle(color: Colors.white54)),
+                      ),
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(backgroundColor: Colors.redAccent, foregroundColor: Colors.white),
+                        onPressed: () {
+                          ref.read(p.transactionsProvider.notifier).clearAllTransactions();
+                          Navigator.pop(confirmCtx);
+                          // Trigger haptic feedback to confirm
+                          HapticFeedback.heavyImpact();
+                        },
+                        child: const Text('Evet, Sıfırla (Reset)'),
+                      ),
+                    ],
+                  ),
+                );
+              },
+              child: const Text('Tüm Harcamaları Sıfırla (Reset All)', style: TextStyle(fontWeight: FontWeight.bold)),
+            ),
             const SizedBox(height: 32),
           ],
         ),
