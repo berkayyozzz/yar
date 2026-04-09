@@ -3,20 +3,24 @@ import 'dart:ui' as ui;
 import 'package:flutter/rendering.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:share_plus/share_plus.dart';
+import 'package:gal/gal.dart';
 
 class ShareService {
   /// Captures the [boundary] widget as a PNG and opens the native share sheet.
   static Future<void> shareCard({
     required RenderRepaintBoundary boundary,
+    Rect? sharePositionOrigin,
     int score = 0,
     double pixelRatio = 3.0,
   }) async {
     final file = await _captureToFile(boundary, pixelRatio);
+    
+    // On iPad, sharePositionOrigin is required to avoid crashes
     await Share.shareXFiles(
       [XFile(file.path, mimeType: 'image/png')],
-      text:
-          'My budget roast score: $score/100 🔥\n#SmartBudgetRoast #GetJudged',
+      text: 'My budget roast score: $score/100 🔥\n#SmartBudgetRoast #GetJudged',
       subject: 'My Budget Roast',
+      sharePositionOrigin: sharePositionOrigin,
     );
   }
 
@@ -30,6 +34,10 @@ class ShareService {
     final savePath =
         '${dir.path}/roast_${DateTime.now().millisecondsSinceEpoch}.png';
     await file.copy(savePath);
+    
+    // Save to system gallery
+    await Gal.putImage(savePath);
+    
     return savePath;
   }
 

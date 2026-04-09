@@ -61,12 +61,28 @@ class _SharePreviewSheetState extends State<_SharePreviewSheet> {
   Future<void> _onShare() async {
     final boundary = _getBoundary();
     if (boundary == null) return;
+    
+    // Get button position for iPad support
+    final box = context.findRenderObject() as RenderBox?;
+    final origin = box != null ? (box.localToGlobal(Offset.zero) & box.size) : null;
+
     setState(() => _sharing = true);
     try {
       await ShareService.shareCard(
         boundary: boundary,
         score: widget.roast.score,
+        sharePositionOrigin: origin,
       );
+    } catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('❌ Share failed: ${e.toString()}'),
+            backgroundColor: Colors.redAccent,
+            behavior: SnackBarBehavior.floating,
+          ),
+        );
+      }
     } finally {
       if (mounted) setState(() => _sharing = false);
     }
@@ -77,16 +93,31 @@ class _SharePreviewSheetState extends State<_SharePreviewSheet> {
     if (boundary == null) return;
     setState(() => _saving = true);
     try {
-      await ShareService.saveCard(boundary: boundary);
+      final path = await ShareService.saveCard(boundary: boundary);
       if (mounted) {
         HapticFeedback.heavyImpact();
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: const Text('💾 Image saved to documents!'),
+            content: const Text('💾 Image saved to Photos/Gallery!'),
+            action: SnackBarAction(
+              label: 'OK',
+              textColor: Colors.white,
+              onPressed: () {},
+            ),
             backgroundColor: const Color(0xFF00FF7F),
             behavior: SnackBarBehavior.floating,
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+          ),
+        );
+      }
+    } catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('❌ Save failed: ${e.toString()}'),
+            backgroundColor: Colors.redAccent,
+            behavior: SnackBarBehavior.floating,
           ),
         );
       }
