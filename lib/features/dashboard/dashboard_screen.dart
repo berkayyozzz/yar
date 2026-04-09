@@ -165,13 +165,13 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen>
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                     title: const Text('Are you sure?', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
                     content: const Text(
-                      'Tüm harcamaları sıfırlamak (Clear All Data) istediğinize emin misiniz? Bu işlem geri alınamaz ve tüm verileriniz silinir.',
+                      'Are you sure you want to clear all data? This action cannot be undone and all your data will be deleted.',
                       style: TextStyle(color: Colors.white70),
                     ),
                     actions: [
                       TextButton(
                         onPressed: () => Navigator.pop(confirmCtx),
-                        child: const Text('İptal (Cancel)', style: TextStyle(color: Colors.white54)),
+                        child: const Text('Cancel', style: TextStyle(color: Colors.white54)),
                       ),
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(backgroundColor: Colors.redAccent, foregroundColor: Colors.white),
@@ -181,13 +181,13 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen>
                           // Trigger haptic feedback to confirm
                           HapticFeedback.heavyImpact();
                         },
-                        child: const Text('Evet, Sıfırla (Reset)'),
+                        child: const Text('Yes, Reset'),
                       ),
                     ],
                   ),
                 );
               },
-              child: const Text('Tüm Harcamaları Sıfırla (Reset All)', style: TextStyle(fontWeight: FontWeight.bold)),
+              child: const Text('Reset All', style: TextStyle(fontWeight: FontWeight.bold)),
             ),
             const SizedBox(height: 32),
           ],
