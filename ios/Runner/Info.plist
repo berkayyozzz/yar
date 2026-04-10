@@ -66,6 +66,8 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>GADApplicationIdentifier</key>
+	<string>ca-app-pub-6164147837428706~9093077953</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>This app requires permission to save roast cards to your photo library.</string>
 	<key>NSPhotoLibraryUsageDescription</key>

@@ -3,7 +3,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:go_router/go_router.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'core/theme/app_theme.dart';
+import 'core/ads/app_open_ad_manager.dart';
 import 'features/dashboard/dashboard_screen.dart';
 
 void main() async {
@@ -12,6 +14,7 @@ void main() async {
   await Hive.initFlutter();
   await Hive.openBox('transactions');
   await Hive.openBox('settings');
+  MobileAds.instance.initialize();
 
   runApp(
     ProviderScope(
@@ -37,13 +40,32 @@ final routerProvider = Provider<GoRouter>((ref) {
   );
 });
 
-class SmartBudgetApp extends ConsumerWidget {
+class SmartBudgetApp extends ConsumerStatefulWidget {
   const SmartBudgetApp({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<SmartBudgetApp> createState() => _SmartBudgetAppState();
+}
+
+class _SmartBudgetAppState extends ConsumerState<SmartBudgetApp> {
+  late final AppOpenAdManager _appOpenAdManager;
+  late final AppLifecycleReactor _appLifecycleReactor;
+
+  @override
+  void initState() {
+    super.initState();
+    _appOpenAdManager = AppOpenAdManager();
+    _appOpenAdManager.loadAd();
+    _appLifecycleReactor = AppLifecycleReactor(
+      appOpenAdManager: _appOpenAdManager,
+    );
+    _appLifecycleReactor.listenToAppStateChanges();
+  }
+
+  @override
+  Widget build(BuildContext context) {
     final router = ref.watch(routerProvider);
-    
+
     return MaterialApp.router(
       title: 'Smart Budget Roast',
       debugShowCheckedModeBanner: false,

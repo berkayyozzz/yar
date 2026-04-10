@@ -10,6 +10,8 @@ import '../roast/screens/share_preview_sheet.dart';
 import '../roast/widgets/nuclear_alert_dialog.dart';
 import '../roast/providers/badge_provider.dart';
 import 'providers/settings_provider.dart';
+import 'widgets/banner_ad_widget.dart';
+import '../../core/ads/interstitial_ad_manager.dart';
 
 class DashboardScreen extends ConsumerStatefulWidget {
   const DashboardScreen({super.key});
@@ -33,9 +35,13 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen>
   String _fabLabel = '+ Roast Me';
   String _shareLabel = 'Post your shame 🔥';
 
+  // ── Interstitial Ad ───────────────────────────────────────────────────────
+  final InterstitialAdManager _interstitialAdManager = InterstitialAdManager();
+
   @override
   void initState() {
     super.initState();
+    _interstitialAdManager.loadAd();
 
     _glowController = AnimationController(
       vsync: this,
@@ -98,9 +104,12 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen>
       builder: (ctx) => const AddTransactionSheet(),
     ).then((wantsNuclear) {
       _refreshProgress();
-      if (wantsNuclear == true && mounted) {
-        showNuclearAlert(context);
-      }
+      // İşlem eklendikten sonra geçiş reklamı göster
+      _interstitialAdManager.showAd(onComplete: () {
+        if (wantsNuclear == true && mounted) {
+          showNuclearAlert(context);
+        }
+      });
     });
   }
 
@@ -268,6 +277,8 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen>
               _buildRoastSection(roast),
               const SizedBox(height: 20),
               if (!roast.isEmpty) _buildShareButton(context, roast),
+              const SizedBox(height: 20),
+              const BannerAdWidget(),
               const SizedBox(height: 32),
               _buildBadgesSection(context, ref),
               const SizedBox(height: 32),
